@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Account_Activation_Summary</fullName>
+    <active>true</active>
+    <description>When user manually update the Active check box then he needs to fill the Account Activation Summary</description>
+    <errorConditionFormula>AND( Active__c  = True, AccountActivationSummary__c  = Null)</errorConditionFormula>
+    <errorDisplayField>AccountActivationSummary__c</errorDisplayField>
+    <errorMessage>Account Activation Summary field not to be empty</errorMessage>
+</ValidationRule>
